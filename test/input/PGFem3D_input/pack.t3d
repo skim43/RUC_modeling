@@ -1,0 +1,759 @@
+# File Header
+# Execute with t3d -i [in].t3d -o [out].out -d 0.01 -$ -X
+# Volume Fraction of Particles Before Shrinking: 0.183783015
+# Volume Fraction of Particles After Shrinking: 0.183783015
+# Sphere Information
+# Particle 1
+vertex 1 xyz 0 0 0.015
+vertex 2 xyz 0 0 -0.015
+curve 1 order 4 vertex 1 2
+polygon 1 xyz 0 0.03 0.015 weight 0.3333333333
+polygon 2 xyz 0 0.03 -0.015 weight 0.3333333333
+curve 2 order 4 vertex 2 2
+polygon 1 xyz 0 0 -0.015 weight 0.3333333333
+polygon 2 xyz 0 0 -0.015 weight 0.3333333333
+curve 3 order 4 vertex 2 1
+polygon 1 xyz 0 -0.03 -0.015 weight 0.3333333333
+polygon 2 xyz 0 -0.03 0.015 weight 0.3333333333
+curve 4 order 4 vertex 1 1
+polygon 1 xyz 0 0 0.015 weight 0.3333333333
+polygon 2 xyz 0 0 0.015 weight 0.3333333333
+
+surface 1 order 4 4 Curve 1 2 3 4 
+polygon 1 1 xyz 0.06 0.03 -0.015 weight 0.1111111111
+polygon 2 1 xyz 0.06 0.03 0.015 weight 0.1111111111
+polygon 1 2 xyz 0.06 -0.03 -0.015 weight 0.1111111111
+polygon 2 2 xyz 0.06 -0.03 0.015 weight 0.1111111111
+
+surface 2 order 4 4 Curve 1 4 3 2 
+polygon 1 1 xyz -0.06 0.03 0.015 weight 0.1111111111
+polygon 2 1 xyz -0.06 0.03 -0.015 weight 0.1111111111
+polygon 1 2 xyz -0.06 -0.03 0.015 weight 0.1111111111
+polygon 2 2 xyz -0.06 -0.03 -0.015 weight 0.1111111111
+
+region 1 boundary surface 1 2  size def property 0
+# Particle 2
+vertex 5 xyz 0 -0.05 -0.015 virtual
+vertex 6 xyz 0 -0.05 0.015 virtual
+curve 9 order 4 vertex 5 6 virtual
+polygon 1 xyz 0 -0.08 -0.015 weight 0.3333333333
+polygon 2 xyz 0 -0.08 0.015 weight 0.3333333333
+curve 10 order 4 vertex 6 6 virtual
+polygon 1 xyz 0 -0.05 0.015 weight 0.3333333333
+polygon 2 xyz 0 -0.05 0.015 weight 0.3333333333
+curve 11 order 4 vertex 6 5 virtual
+polygon 1 xyz 0 -0.02 0.015 weight 0.3333333333
+polygon 2 xyz 0 -0.02 -0.015 weight 0.3333333333
+curve 12 order 4 vertex 5 5 virtual
+polygon 1 xyz 0 -0.05 -0.015 weight 0.3333333333
+polygon 2 xyz 0 -0.05 -0.015 weight 0.3333333333
+
+surface 5 order 4 4 Curve 9 10 11 12  virtual
+polygon 1 1 xyz 0.06 -0.08 0.015 weight 0.1111111111
+polygon 2 1 xyz 0.06 -0.08 -0.015 weight 0.1111111111
+polygon 1 2 xyz 0.06 -0.02 0.015 weight 0.1111111111
+polygon 2 2 xyz 0.06 -0.02 -0.015 weight 0.1111111111
+
+surface 6 order 4 4 Curve 9 12 11 10  virtual
+polygon 1 1 xyz -0.06 -0.08 -0.015 weight 0.1111111111
+polygon 2 1 xyz -0.06 -0.08 0.015 weight 0.1111111111
+polygon 1 2 xyz -0.06 -0.02 -0.015 weight 0.1111111111
+polygon 2 2 xyz -0.06 -0.02 0.015 weight 0.1111111111
+# Particle 2
+vertex 9 xyz 0 -0.05 -0.015
+vertex 10 xyz 0 -0.05 0.015
+vertex 11 xyz 0 -0.035 -1.836970199e-18
+curve 16 order 4 vertex 9 10
+polygon 1 xyz 0.03 -0.05 -0.015 weight 0.3333333333
+polygon 2 xyz 0.03 -0.05 0.015 weight 0.3333333333
+curve 17 order 4 vertex 9 10
+polygon 1 xyz -0.03 -0.05 -0.015 weight 0.3333333333
+polygon 2 xyz -0.03 -0.05 0.015 weight 0.3333333333
+curve 18 order 4 vertex 9 11
+polygon 1 xyz 0 -0.04121320344 -0.015 weight 0.8047378541
+polygon 2 xyz 0 -0.035 -0.008786796564 weight 0.8047378541
+curve 19 order 4 vertex 10 11
+polygon 1 xyz 0 -0.04121320344 0.015 weight 0.8047378541
+polygon 2 xyz 0 -0.035 0.008786796564 weight 0.8047378541
+
+shell 3 bgsurface 6 boundary curve 17 -18 19 size def
+shell 4 bgsurface 5 boundary curve -16 18 -19 size def
+patch 2 normal 0 -1 1.224646799e-16 boundary curve 16 -17 size def
+region 3 boundary shell 3 4 boundary patch 2  size def property 0
+# Particle 3
+vertex 14 xyz 0 0.05 0.015 virtual
+vertex 15 xyz 0 0.05 -0.015 virtual
+curve 24 order 4 vertex 14 15 virtual
+polygon 1 xyz 0 0.08 0.015 weight 0.3333333333
+polygon 2 xyz 0 0.08 -0.015 weight 0.3333333333
+curve 25 order 4 vertex 15 15 virtual
+polygon 1 xyz 0 0.05 -0.015 weight 0.3333333333
+polygon 2 xyz 0 0.05 -0.015 weight 0.3333333333
+curve 26 order 4 vertex 15 14 virtual
+polygon 1 xyz 0 0.02 -0.015 weight 0.3333333333
+polygon 2 xyz 0 0.02 0.015 weight 0.3333333333
+curve 27 order 4 vertex 14 14 virtual
+polygon 1 xyz 0 0.05 0.015 weight 0.3333333333
+polygon 2 xyz 0 0.05 0.015 weight 0.3333333333
+
+surface 9 order 4 4 Curve 24 25 26 27  virtual
+polygon 1 1 xyz 0.06 0.08 -0.015 weight 0.1111111111
+polygon 2 1 xyz 0.06 0.08 0.015 weight 0.1111111111
+polygon 1 2 xyz 0.06 0.02 -0.015 weight 0.1111111111
+polygon 2 2 xyz 0.06 0.02 0.015 weight 0.1111111111
+
+surface 10 order 4 4 Curve 24 27 26 25  virtual
+polygon 1 1 xyz -0.06 0.08 0.015 weight 0.1111111111
+polygon 2 1 xyz -0.06 0.08 -0.015 weight 0.1111111111
+polygon 1 2 xyz -0.06 0.02 0.015 weight 0.1111111111
+polygon 2 2 xyz -0.06 0.02 -0.015 weight 0.1111111111
+# Particle 3
+vertex 18 xyz 0 0.05 0.015
+vertex 19 xyz 0 0.05 -0.015
+vertex 20 xyz 0 0.035 0
+curve 31 order 4 vertex 18 19
+polygon 1 xyz 0.03 0.05 0.015 weight 0.3333333333
+polygon 2 xyz 0.03 0.05 -0.015 weight 0.3333333333
+curve 32 order 4 vertex 18 19
+polygon 1 xyz -0.03 0.05 0.015 weight 0.3333333333
+polygon 2 xyz -0.03 0.05 -0.015 weight 0.3333333333
+curve 33 order 4 vertex 18 20
+polygon 1 xyz 0 0.04121320344 0.015 weight 0.8047378541
+polygon 2 xyz 0 0.035 0.008786796564 weight 0.8047378541
+curve 34 order 4 vertex 19 20
+polygon 1 xyz 0 0.04121320344 -0.015 weight 0.8047378541
+polygon 2 xyz 0 0.035 -0.008786796564 weight 0.8047378541
+
+shell 7 bgsurface 10 boundary curve 32 -33 34 size def
+shell 8 bgsurface 9 boundary curve -31 33 -34 size def
+patch 4 normal 0 1 0 boundary curve 31 -32 size def
+region 5 boundary shell 7 8 boundary patch 4  size def property 0
+# Particle 4
+vertex 23 xyz -0.05 0 -0.015 virtual
+vertex 24 xyz -0.05 0 0.015 virtual
+curve 39 order 4 vertex 23 24 virtual
+polygon 1 xyz -0.08 1.836970199e-18 -0.015 weight 0.3333333333
+polygon 2 xyz -0.08 1.836970199e-18 0.015 weight 0.3333333333
+curve 40 order 4 vertex 24 24 virtual
+polygon 1 xyz -0.05 0 0.015 weight 0.3333333333
+polygon 2 xyz -0.05 0 0.015 weight 0.3333333333
+curve 41 order 4 vertex 24 23 virtual
+polygon 1 xyz -0.02 -1.836970199e-18 0.015 weight 0.3333333333
+polygon 2 xyz -0.02 -1.836970199e-18 -0.015 weight 0.3333333333
+curve 42 order 4 vertex 23 23 virtual
+polygon 1 xyz -0.05 0 -0.015 weight 0.3333333333
+polygon 2 xyz -0.05 0 -0.015 weight 0.3333333333
+
+surface 13 order 4 4 Curve 39 40 41 42  virtual
+polygon 1 1 xyz -0.08 -0.06 0.015 weight 0.1111111111
+polygon 2 1 xyz -0.08 -0.06 -0.015 weight 0.1111111111
+polygon 1 2 xyz -0.02 -0.06 0.015 weight 0.1111111111
+polygon 2 2 xyz -0.02 -0.06 -0.015 weight 0.1111111111
+
+surface 14 order 4 4 Curve 39 42 41 40  virtual
+polygon 1 1 xyz -0.08 0.06 -0.015 weight 0.1111111111
+polygon 2 1 xyz -0.08 0.06 0.015 weight 0.1111111111
+polygon 1 2 xyz -0.02 0.06 -0.015 weight 0.1111111111
+polygon 2 2 xyz -0.02 0.06 0.015 weight 0.1111111111
+# Particle 4
+vertex 27 xyz -0.05 0 -0.015
+vertex 28 xyz -0.05 0 0.015
+vertex 29 xyz -0.035 -9.184850994e-19 -1.836970199e-18
+curve 46 order 4 vertex 27 28
+polygon 1 xyz -0.05 -0.03 -0.015 weight 0.3333333333
+polygon 2 xyz -0.05 -0.03 0.015 weight 0.3333333333
+curve 47 order 4 vertex 27 28
+polygon 1 xyz -0.05 0.03 -0.015 weight 0.3333333333
+polygon 2 xyz -0.05 0.03 0.015 weight 0.3333333333
+curve 48 order 4 vertex 27 29
+polygon 1 xyz -0.04121320344 -5.380361144e-19 -0.015 weight 0.8047378541
+polygon 2 xyz -0.035 -9.184850994e-19 -0.008786796564 weight 0.8047378541
+curve 49 order 4 vertex 28 29
+polygon 1 xyz -0.04121320344 -5.380361144e-19 0.015 weight 0.8047378541
+polygon 2 xyz -0.035 -9.184850994e-19 0.008786796564 weight 0.8047378541
+
+shell 11 bgsurface 14 boundary curve 47 -48 49 size def
+shell 12 bgsurface 13 boundary curve -46 48 -49 size def
+patch 6 normal -1 6.123233996e-17 1.224646799e-16 boundary curve 46 -47 size def
+region 7 boundary shell 11 12 boundary patch 6  size def property 0
+# Particle 5
+vertex 32 xyz 0.05 0 0.015 virtual
+vertex 33 xyz 0.05 0 -0.015 virtual
+curve 54 order 4 vertex 32 33 virtual
+polygon 1 xyz 0.08 1.836970199e-18 0.015 weight 0.3333333333
+polygon 2 xyz 0.08 1.836970199e-18 -0.015 weight 0.3333333333
+curve 55 order 4 vertex 33 33 virtual
+polygon 1 xyz 0.05 0 -0.015 weight 0.3333333333
+polygon 2 xyz 0.05 0 -0.015 weight 0.3333333333
+curve 56 order 4 vertex 33 32 virtual
+polygon 1 xyz 0.02 -1.836970199e-18 -0.015 weight 0.3333333333
+polygon 2 xyz 0.02 -1.836970199e-18 0.015 weight 0.3333333333
+curve 57 order 4 vertex 32 32 virtual
+polygon 1 xyz 0.05 0 0.015 weight 0.3333333333
+polygon 2 xyz 0.05 0 0.015 weight 0.3333333333
+
+surface 17 order 4 4 Curve 54 55 56 57  virtual
+polygon 1 1 xyz 0.08 -0.06 -0.015 weight 0.1111111111
+polygon 2 1 xyz 0.08 -0.06 0.015 weight 0.1111111111
+polygon 1 2 xyz 0.02 -0.06 -0.015 weight 0.1111111111
+polygon 2 2 xyz 0.02 -0.06 0.015 weight 0.1111111111
+
+surface 18 order 4 4 Curve 54 57 56 55  virtual
+polygon 1 1 xyz 0.08 0.06 0.015 weight 0.1111111111
+polygon 2 1 xyz 0.08 0.06 -0.015 weight 0.1111111111
+polygon 1 2 xyz 0.02 0.06 0.015 weight 0.1111111111
+polygon 2 2 xyz 0.02 0.06 -0.015 weight 0.1111111111
+# Particle 5
+vertex 36 xyz 0.05 0 0.015
+vertex 37 xyz 0.05 0 -0.015
+vertex 38 xyz 0.035 -9.184850994e-19 0
+curve 61 order 4 vertex 36 37
+polygon 1 xyz 0.05 -0.03 0.015 weight 0.3333333333
+polygon 2 xyz 0.05 -0.03 -0.015 weight 0.3333333333
+curve 62 order 4 vertex 36 37
+polygon 1 xyz 0.05 0.03 0.015 weight 0.3333333333
+polygon 2 xyz 0.05 0.03 -0.015 weight 0.3333333333
+curve 63 order 4 vertex 36 38
+polygon 1 xyz 0.04121320344 -5.380361144e-19 0.015 weight 0.8047378541
+polygon 2 xyz 0.035 -9.184850994e-19 0.008786796564 weight 0.8047378541
+curve 64 order 4 vertex 37 38
+polygon 1 xyz 0.04121320344 -5.380361144e-19 -0.015 weight 0.8047378541
+polygon 2 xyz 0.035 -9.184850994e-19 -0.008786796564 weight 0.8047378541
+
+shell 15 bgsurface 18 boundary curve 62 -63 64 size def
+shell 16 bgsurface 17 boundary curve -61 63 -64 size def
+patch 8 normal 1 6.123233996e-17 0 boundary curve 61 -62 size def
+region 9 boundary shell 15 16 boundary patch 8  size def property 0
+# Particle 6
+vertex 45 xyz 0.065 -0.05 0.025 virtual
+vertex 46 xyz 0.035 -0.05 0.025 virtual
+curve 77 order 4 vertex 45 46 virtual
+polygon 1 xyz 0.065 -0.08 0.025 weight 0.3333333333
+polygon 2 xyz 0.035 -0.08 0.025 weight 0.3333333333
+curve 78 order 4 vertex 46 46 virtual
+polygon 1 xyz 0.035 -0.05 0.025 weight 0.3333333333
+polygon 2 xyz 0.035 -0.05 0.025 weight 0.3333333333
+curve 79 order 4 vertex 46 45 virtual
+polygon 1 xyz 0.035 -0.02 0.025 weight 0.3333333333
+polygon 2 xyz 0.065 -0.02 0.025 weight 0.3333333333
+curve 80 order 4 vertex 45 45 virtual
+polygon 1 xyz 0.065 -0.05 0.025 weight 0.3333333333
+polygon 2 xyz 0.065 -0.05 0.025 weight 0.3333333333
+
+surface 25 order 4 4 Curve 77 78 79 80  virtual
+polygon 1 1 xyz 0.035 -0.08 0.085 weight 0.1111111111
+polygon 2 1 xyz 0.065 -0.08 0.085 weight 0.1111111111
+polygon 1 2 xyz 0.035 -0.02 0.085 weight 0.1111111111
+polygon 2 2 xyz 0.065 -0.02 0.085 weight 0.1111111111
+
+surface 26 order 4 4 Curve 77 80 79 78  virtual
+polygon 1 1 xyz 0.065 -0.08 -0.035 weight 0.1111111111
+polygon 2 1 xyz 0.035 -0.08 -0.035 weight 0.1111111111
+polygon 1 2 xyz 0.065 -0.02 -0.035 weight 0.1111111111
+polygon 2 2 xyz 0.035 -0.02 -0.035 weight 0.1111111111
+# Particle 6
+vertex 59 xyz 0.05 -0.05 0.04
+vertex 60 xyz 0.05 -0.05 0.01
+vertex 61 xyz 0.05 -0.035 0.025
+vertex 62 xyz 0.035 -0.05 0.025
+vertex 63 xyz 0.03939339828 -0.03939339828 0.025
+curve 99 order 4 vertex 61 59
+polygon 1 xyz 0.05 -0.035 0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.05 -0.04121320344 0.04 weight 0.8047378541
+curve 100 order 4 vertex 61 63
+polygon 1 xyz 0.04596858347 -0.035 0.025 weight 0.9492530217
+polygon 2 xyz 0.04224404025 -0.03654275632 0.025 weight 0.9492530217
+curve 101 order 4 vertex 63 62
+polygon 1 xyz 0.03654275632 -0.04224404025 0.025 weight 0.9492530217
+polygon 2 xyz 0.035 -0.04596858347 0.025 weight 0.9492530217
+curve 102 order 4 vertex 62 59
+polygon 1 xyz 0.035 -0.05 0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.04121320344 -0.05 0.04 weight 0.8047378541
+curve 103 order 4 vertex 61 60
+polygon 1 xyz 0.05 -0.035 0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.05 -0.04121320344 0.01 weight 0.8047378541
+curve 104 order 4 vertex 62 60
+polygon 1 xyz 0.035 -0.05 0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.04121320344 -0.05 0.01 weight 0.8047378541
+curve 105 vertex 59 60
+
+shell 23 bgsurface 25 boundary curve -99 100 101 102 size def
+shell 24 bgsurface 26 boundary curve 103 -100 -101 -104 size def
+patch 15 normal 1 -7.498798913e-33 -6.123233996e-17 boundary curve 99 -103 105 size def
+patch 16 normal 0 -1 1.224646799e-16 boundary curve -102 104 -105 size def
+region 13 boundary shell 23 24 boundary patch 15 16  size def property 0
+# Particle 7
+vertex 70 xyz -0.065 -0.05 0.025 virtual
+vertex 71 xyz -0.035 -0.05 0.025 virtual
+curve 118 order 4 vertex 70 71 virtual
+polygon 1 xyz -0.065 -0.08 0.025 weight 0.3333333333
+polygon 2 xyz -0.035 -0.08 0.025 weight 0.3333333333
+curve 119 order 4 vertex 71 71 virtual
+polygon 1 xyz -0.035 -0.05 0.025 weight 0.3333333333
+polygon 2 xyz -0.035 -0.05 0.025 weight 0.3333333333
+curve 120 order 4 vertex 71 70 virtual
+polygon 1 xyz -0.035 -0.02 0.025 weight 0.3333333333
+polygon 2 xyz -0.065 -0.02 0.025 weight 0.3333333333
+curve 121 order 4 vertex 70 70 virtual
+polygon 1 xyz -0.065 -0.05 0.025 weight 0.3333333333
+polygon 2 xyz -0.065 -0.05 0.025 weight 0.3333333333
+
+surface 33 order 4 4 Curve 118 119 120 121  virtual
+polygon 1 1 xyz -0.035 -0.08 -0.035 weight 0.1111111111
+polygon 2 1 xyz -0.065 -0.08 -0.035 weight 0.1111111111
+polygon 1 2 xyz -0.035 -0.02 -0.035 weight 0.1111111111
+polygon 2 2 xyz -0.065 -0.02 -0.035 weight 0.1111111111
+
+surface 34 order 4 4 Curve 118 121 120 119  virtual
+polygon 1 1 xyz -0.065 -0.08 0.085 weight 0.1111111111
+polygon 2 1 xyz -0.035 -0.08 0.085 weight 0.1111111111
+polygon 1 2 xyz -0.065 -0.02 0.085 weight 0.1111111111
+polygon 2 2 xyz -0.035 -0.02 0.085 weight 0.1111111111
+# Particle 7
+vertex 84 xyz -0.05 -0.05 0.01
+vertex 85 xyz -0.05 -0.05 0.04
+vertex 86 xyz -0.05 -0.035 0.025
+vertex 87 xyz -0.035 -0.05 0.025
+vertex 88 xyz -0.03939339828 -0.03939339828 0.025
+curve 140 order 4 vertex 86 84
+polygon 1 xyz -0.05 -0.035 0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.05 -0.04121320344 0.01 weight 0.8047378541
+curve 141 order 4 vertex 86 88
+polygon 1 xyz -0.04596858347 -0.035 0.025 weight 0.9492530217
+polygon 2 xyz -0.04224404025 -0.03654275632 0.025 weight 0.9492530217
+curve 142 order 4 vertex 88 87
+polygon 1 xyz -0.03654275632 -0.04224404025 0.025 weight 0.9492530217
+polygon 2 xyz -0.035 -0.04596858347 0.025 weight 0.9492530217
+curve 143 order 4 vertex 87 84
+polygon 1 xyz -0.035 -0.05 0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.04121320344 -0.05 0.01 weight 0.8047378541
+curve 144 order 4 vertex 86 85
+polygon 1 xyz -0.05 -0.035 0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.05 -0.04121320344 0.04 weight 0.8047378541
+curve 145 order 4 vertex 87 85
+polygon 1 xyz -0.035 -0.05 0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.04121320344 -0.05 0.04 weight 0.8047378541
+curve 146 vertex 84 85
+
+shell 31 bgsurface 33 boundary curve -140 141 142 143 size def
+shell 32 bgsurface 34 boundary curve 144 -141 -142 -145 size def
+patch 23 normal -1 -0 6.123233996e-17 boundary curve 140 -144 146 size def
+patch 24 normal -0 -1 0 boundary curve -143 145 -146 size def
+region 17 boundary shell 31 32 boundary patch 23 24  size def property 0
+# Particle 8
+vertex 95 xyz 0.065 -0.05 -0.025 virtual
+vertex 96 xyz 0.035 -0.05 -0.025 virtual
+curve 159 order 4 vertex 95 96 virtual
+polygon 1 xyz 0.065 -0.08 -0.025 weight 0.3333333333
+polygon 2 xyz 0.035 -0.08 -0.025 weight 0.3333333333
+curve 160 order 4 vertex 96 96 virtual
+polygon 1 xyz 0.035 -0.05 -0.025 weight 0.3333333333
+polygon 2 xyz 0.035 -0.05 -0.025 weight 0.3333333333
+curve 161 order 4 vertex 96 95 virtual
+polygon 1 xyz 0.035 -0.02 -0.025 weight 0.3333333333
+polygon 2 xyz 0.065 -0.02 -0.025 weight 0.3333333333
+curve 162 order 4 vertex 95 95 virtual
+polygon 1 xyz 0.065 -0.05 -0.025 weight 0.3333333333
+polygon 2 xyz 0.065 -0.05 -0.025 weight 0.3333333333
+
+surface 41 order 4 4 Curve 159 160 161 162  virtual
+polygon 1 1 xyz 0.035 -0.08 0.035 weight 0.1111111111
+polygon 2 1 xyz 0.065 -0.08 0.035 weight 0.1111111111
+polygon 1 2 xyz 0.035 -0.02 0.035 weight 0.1111111111
+polygon 2 2 xyz 0.065 -0.02 0.035 weight 0.1111111111
+
+surface 42 order 4 4 Curve 159 162 161 160  virtual
+polygon 1 1 xyz 0.065 -0.08 -0.085 weight 0.1111111111
+polygon 2 1 xyz 0.035 -0.08 -0.085 weight 0.1111111111
+polygon 1 2 xyz 0.065 -0.02 -0.085 weight 0.1111111111
+polygon 2 2 xyz 0.035 -0.02 -0.085 weight 0.1111111111
+# Particle 8
+vertex 109 xyz 0.05 -0.05 -0.01
+vertex 110 xyz 0.05 -0.05 -0.04
+vertex 111 xyz 0.05 -0.035 -0.025
+vertex 112 xyz 0.035 -0.05 -0.025
+vertex 113 xyz 0.03939339828 -0.03939339828 -0.025
+curve 181 order 4 vertex 111 109
+polygon 1 xyz 0.05 -0.035 -0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.05 -0.04121320344 -0.01 weight 0.8047378541
+curve 182 order 4 vertex 111 113
+polygon 1 xyz 0.04596858347 -0.035 -0.025 weight 0.9492530217
+polygon 2 xyz 0.04224404025 -0.03654275632 -0.025 weight 0.9492530217
+curve 183 order 4 vertex 113 112
+polygon 1 xyz 0.03654275632 -0.04224404025 -0.025 weight 0.9492530217
+polygon 2 xyz 0.035 -0.04596858347 -0.025 weight 0.9492530217
+curve 184 order 4 vertex 112 109
+polygon 1 xyz 0.035 -0.05 -0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.04121320344 -0.05 -0.01 weight 0.8047378541
+curve 185 order 4 vertex 111 110
+polygon 1 xyz 0.05 -0.035 -0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.05 -0.04121320344 -0.04 weight 0.8047378541
+curve 186 order 4 vertex 112 110
+polygon 1 xyz 0.035 -0.05 -0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.04121320344 -0.05 -0.04 weight 0.8047378541
+curve 187 vertex 109 110
+
+shell 39 bgsurface 41 boundary curve -181 182 183 184 size def
+shell 40 bgsurface 42 boundary curve 185 -182 -183 -186 size def
+patch 31 normal 1 -7.498798913e-33 -6.123233996e-17 boundary curve 181 -185 187 size def
+patch 32 normal 0 -1 1.224646799e-16 boundary curve -184 186 -187 size def
+region 21 boundary shell 39 40 boundary patch 31 32  size def property 0
+# Particle 9
+vertex 120 xyz -0.065 -0.05 -0.025 virtual
+vertex 121 xyz -0.035 -0.05 -0.025 virtual
+curve 200 order 4 vertex 120 121 virtual
+polygon 1 xyz -0.065 -0.08 -0.025 weight 0.3333333333
+polygon 2 xyz -0.035 -0.08 -0.025 weight 0.3333333333
+curve 201 order 4 vertex 121 121 virtual
+polygon 1 xyz -0.035 -0.05 -0.025 weight 0.3333333333
+polygon 2 xyz -0.035 -0.05 -0.025 weight 0.3333333333
+curve 202 order 4 vertex 121 120 virtual
+polygon 1 xyz -0.035 -0.02 -0.025 weight 0.3333333333
+polygon 2 xyz -0.065 -0.02 -0.025 weight 0.3333333333
+curve 203 order 4 vertex 120 120 virtual
+polygon 1 xyz -0.065 -0.05 -0.025 weight 0.3333333333
+polygon 2 xyz -0.065 -0.05 -0.025 weight 0.3333333333
+
+surface 49 order 4 4 Curve 200 201 202 203  virtual
+polygon 1 1 xyz -0.035 -0.08 -0.085 weight 0.1111111111
+polygon 2 1 xyz -0.065 -0.08 -0.085 weight 0.1111111111
+polygon 1 2 xyz -0.035 -0.02 -0.085 weight 0.1111111111
+polygon 2 2 xyz -0.065 -0.02 -0.085 weight 0.1111111111
+
+surface 50 order 4 4 Curve 200 203 202 201  virtual
+polygon 1 1 xyz -0.065 -0.08 0.035 weight 0.1111111111
+polygon 2 1 xyz -0.035 -0.08 0.035 weight 0.1111111111
+polygon 1 2 xyz -0.065 -0.02 0.035 weight 0.1111111111
+polygon 2 2 xyz -0.035 -0.02 0.035 weight 0.1111111111
+# Particle 9
+vertex 134 xyz -0.05 -0.05 -0.04
+vertex 135 xyz -0.05 -0.05 -0.01
+vertex 136 xyz -0.05 -0.035 -0.025
+vertex 137 xyz -0.035 -0.05 -0.025
+vertex 138 xyz -0.03939339828 -0.03939339828 -0.025
+curve 222 order 4 vertex 136 134
+polygon 1 xyz -0.05 -0.035 -0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.05 -0.04121320344 -0.04 weight 0.8047378541
+curve 223 order 4 vertex 136 138
+polygon 1 xyz -0.04596858347 -0.035 -0.025 weight 0.9492530217
+polygon 2 xyz -0.04224404025 -0.03654275632 -0.025 weight 0.9492530217
+curve 224 order 4 vertex 138 137
+polygon 1 xyz -0.03654275632 -0.04224404025 -0.025 weight 0.9492530217
+polygon 2 xyz -0.035 -0.04596858347 -0.025 weight 0.9492530217
+curve 225 order 4 vertex 137 134
+polygon 1 xyz -0.035 -0.05 -0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.04121320344 -0.05 -0.04 weight 0.8047378541
+curve 226 order 4 vertex 136 135
+polygon 1 xyz -0.05 -0.035 -0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.05 -0.04121320344 -0.01 weight 0.8047378541
+curve 227 order 4 vertex 137 135
+polygon 1 xyz -0.035 -0.05 -0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.04121320344 -0.05 -0.01 weight 0.8047378541
+curve 228 vertex 134 135
+
+shell 47 bgsurface 49 boundary curve -222 223 224 225 size def
+shell 48 bgsurface 50 boundary curve 226 -223 -224 -227 size def
+patch 39 normal -1 -0 6.123233996e-17 boundary curve 222 -226 228 size def
+patch 40 normal -0 -1 0 boundary curve -225 227 -228 size def
+region 25 boundary shell 47 48 boundary patch 39 40  size def property 0
+# Particle 10
+vertex 145 xyz 0.065 0.05 0.025 virtual
+vertex 146 xyz 0.035 0.05 0.025 virtual
+curve 241 order 4 vertex 145 146 virtual
+polygon 1 xyz 0.065 0.08 0.025 weight 0.3333333333
+polygon 2 xyz 0.035 0.08 0.025 weight 0.3333333333
+curve 242 order 4 vertex 146 146 virtual
+polygon 1 xyz 0.035 0.05 0.025 weight 0.3333333333
+polygon 2 xyz 0.035 0.05 0.025 weight 0.3333333333
+curve 243 order 4 vertex 146 145 virtual
+polygon 1 xyz 0.035 0.02 0.025 weight 0.3333333333
+polygon 2 xyz 0.065 0.02 0.025 weight 0.3333333333
+curve 244 order 4 vertex 145 145 virtual
+polygon 1 xyz 0.065 0.05 0.025 weight 0.3333333333
+polygon 2 xyz 0.065 0.05 0.025 weight 0.3333333333
+
+surface 57 order 4 4 Curve 241 242 243 244  virtual
+polygon 1 1 xyz 0.035 0.08 -0.035 weight 0.1111111111
+polygon 2 1 xyz 0.065 0.08 -0.035 weight 0.1111111111
+polygon 1 2 xyz 0.035 0.02 -0.035 weight 0.1111111111
+polygon 2 2 xyz 0.065 0.02 -0.035 weight 0.1111111111
+
+surface 58 order 4 4 Curve 241 244 243 242  virtual
+polygon 1 1 xyz 0.065 0.08 0.085 weight 0.1111111111
+polygon 2 1 xyz 0.035 0.08 0.085 weight 0.1111111111
+polygon 1 2 xyz 0.065 0.02 0.085 weight 0.1111111111
+polygon 2 2 xyz 0.035 0.02 0.085 weight 0.1111111111
+# Particle 10
+vertex 159 xyz 0.05 0.05 0.01
+vertex 160 xyz 0.05 0.05 0.04
+vertex 161 xyz 0.05 0.035 0.025
+vertex 162 xyz 0.035 0.05 0.025
+vertex 163 xyz 0.03939339828 0.03939339828 0.025
+curve 263 order 4 vertex 161 159
+polygon 1 xyz 0.05 0.035 0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.05 0.04121320344 0.01 weight 0.8047378541
+curve 264 order 4 vertex 161 163
+polygon 1 xyz 0.04596858347 0.035 0.025 weight 0.9492530217
+polygon 2 xyz 0.04224404025 0.03654275632 0.025 weight 0.9492530217
+curve 265 order 4 vertex 163 162
+polygon 1 xyz 0.03654275632 0.04224404025 0.025 weight 0.9492530217
+polygon 2 xyz 0.035 0.04596858347 0.025 weight 0.9492530217
+curve 266 order 4 vertex 162 159
+polygon 1 xyz 0.035 0.05 0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.04121320344 0.05 0.01 weight 0.8047378541
+curve 267 order 4 vertex 161 160
+polygon 1 xyz 0.05 0.035 0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.05 0.04121320344 0.04 weight 0.8047378541
+curve 268 order 4 vertex 162 160
+polygon 1 xyz 0.035 0.05 0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.04121320344 0.05 0.04 weight 0.8047378541
+curve 269 vertex 159 160
+
+shell 55 bgsurface 57 boundary curve -263 264 265 266 size def
+shell 56 bgsurface 58 boundary curve 267 -264 -265 -268 size def
+patch 47 normal 1 0 6.123233996e-17 boundary curve 263 -267 269 size def
+patch 48 normal 0 1 0 boundary curve -266 268 -269 size def
+region 29 boundary shell 55 56 boundary patch 47 48  size def property 0
+# Particle 11
+vertex 170 xyz -0.065 0.05 0.025 virtual
+vertex 171 xyz -0.035 0.05 0.025 virtual
+curve 282 order 4 vertex 170 171 virtual
+polygon 1 xyz -0.065 0.08 0.025 weight 0.3333333333
+polygon 2 xyz -0.035 0.08 0.025 weight 0.3333333333
+curve 283 order 4 vertex 171 171 virtual
+polygon 1 xyz -0.035 0.05 0.025 weight 0.3333333333
+polygon 2 xyz -0.035 0.05 0.025 weight 0.3333333333
+curve 284 order 4 vertex 171 170 virtual
+polygon 1 xyz -0.035 0.02 0.025 weight 0.3333333333
+polygon 2 xyz -0.065 0.02 0.025 weight 0.3333333333
+curve 285 order 4 vertex 170 170 virtual
+polygon 1 xyz -0.065 0.05 0.025 weight 0.3333333333
+polygon 2 xyz -0.065 0.05 0.025 weight 0.3333333333
+
+surface 65 order 4 4 Curve 282 283 284 285  virtual
+polygon 1 1 xyz -0.035 0.08 0.085 weight 0.1111111111
+polygon 2 1 xyz -0.065 0.08 0.085 weight 0.1111111111
+polygon 1 2 xyz -0.035 0.02 0.085 weight 0.1111111111
+polygon 2 2 xyz -0.065 0.02 0.085 weight 0.1111111111
+
+surface 66 order 4 4 Curve 282 285 284 283  virtual
+polygon 1 1 xyz -0.065 0.08 -0.035 weight 0.1111111111
+polygon 2 1 xyz -0.035 0.08 -0.035 weight 0.1111111111
+polygon 1 2 xyz -0.065 0.02 -0.035 weight 0.1111111111
+polygon 2 2 xyz -0.035 0.02 -0.035 weight 0.1111111111
+# Particle 11
+vertex 184 xyz -0.05 0.05 0.04
+vertex 185 xyz -0.05 0.05 0.01
+vertex 186 xyz -0.05 0.035 0.025
+vertex 187 xyz -0.035 0.05 0.025
+vertex 188 xyz -0.03939339828 0.03939339828 0.025
+curve 304 order 4 vertex 186 184
+polygon 1 xyz -0.05 0.035 0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.05 0.04121320344 0.04 weight 0.8047378541
+curve 305 order 4 vertex 186 188
+polygon 1 xyz -0.04596858347 0.035 0.025 weight 0.9492530217
+polygon 2 xyz -0.04224404025 0.03654275632 0.025 weight 0.9492530217
+curve 306 order 4 vertex 188 187
+polygon 1 xyz -0.03654275632 0.04224404025 0.025 weight 0.9492530217
+polygon 2 xyz -0.035 0.04596858347 0.025 weight 0.9492530217
+curve 307 order 4 vertex 187 184
+polygon 1 xyz -0.035 0.05 0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.04121320344 0.05 0.04 weight 0.8047378541
+curve 308 order 4 vertex 186 185
+polygon 1 xyz -0.05 0.035 0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.05 0.04121320344 0.01 weight 0.8047378541
+curve 309 order 4 vertex 187 185
+polygon 1 xyz -0.035 0.05 0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.04121320344 0.05 0.01 weight 0.8047378541
+curve 310 vertex 184 185
+
+shell 63 bgsurface 65 boundary curve -304 305 306 307 size def
+shell 64 bgsurface 66 boundary curve 308 -305 -306 -309 size def
+patch 55 normal -1 0 6.123233996e-17 boundary curve 304 -308 310 size def
+patch 56 normal -0 1 0 boundary curve -307 309 -310 size def
+region 33 boundary shell 63 64 boundary patch 55 56  size def property 0
+# Particle 12
+vertex 195 xyz 0.065 0.05 -0.025 virtual
+vertex 196 xyz 0.035 0.05 -0.025 virtual
+curve 323 order 4 vertex 195 196 virtual
+polygon 1 xyz 0.065 0.08 -0.025 weight 0.3333333333
+polygon 2 xyz 0.035 0.08 -0.025 weight 0.3333333333
+curve 324 order 4 vertex 196 196 virtual
+polygon 1 xyz 0.035 0.05 -0.025 weight 0.3333333333
+polygon 2 xyz 0.035 0.05 -0.025 weight 0.3333333333
+curve 325 order 4 vertex 196 195 virtual
+polygon 1 xyz 0.035 0.02 -0.025 weight 0.3333333333
+polygon 2 xyz 0.065 0.02 -0.025 weight 0.3333333333
+curve 326 order 4 vertex 195 195 virtual
+polygon 1 xyz 0.065 0.05 -0.025 weight 0.3333333333
+polygon 2 xyz 0.065 0.05 -0.025 weight 0.3333333333
+
+surface 73 order 4 4 Curve 323 324 325 326  virtual
+polygon 1 1 xyz 0.035 0.08 -0.085 weight 0.1111111111
+polygon 2 1 xyz 0.065 0.08 -0.085 weight 0.1111111111
+polygon 1 2 xyz 0.035 0.02 -0.085 weight 0.1111111111
+polygon 2 2 xyz 0.065 0.02 -0.085 weight 0.1111111111
+
+surface 74 order 4 4 Curve 323 326 325 324  virtual
+polygon 1 1 xyz 0.065 0.08 0.035 weight 0.1111111111
+polygon 2 1 xyz 0.035 0.08 0.035 weight 0.1111111111
+polygon 1 2 xyz 0.065 0.02 0.035 weight 0.1111111111
+polygon 2 2 xyz 0.035 0.02 0.035 weight 0.1111111111
+# Particle 12
+vertex 209 xyz 0.05 0.05 -0.04
+vertex 210 xyz 0.05 0.05 -0.01
+vertex 211 xyz 0.05 0.035 -0.025
+vertex 212 xyz 0.035 0.05 -0.025
+vertex 213 xyz 0.03939339828 0.03939339828 -0.025
+curve 345 order 4 vertex 211 209
+polygon 1 xyz 0.05 0.035 -0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.05 0.04121320344 -0.04 weight 0.8047378541
+curve 346 order 4 vertex 211 213
+polygon 1 xyz 0.04596858347 0.035 -0.025 weight 0.9492530217
+polygon 2 xyz 0.04224404025 0.03654275632 -0.025 weight 0.9492530217
+curve 347 order 4 vertex 213 212
+polygon 1 xyz 0.03654275632 0.04224404025 -0.025 weight 0.9492530217
+polygon 2 xyz 0.035 0.04596858347 -0.025 weight 0.9492530217
+curve 348 order 4 vertex 212 209
+polygon 1 xyz 0.035 0.05 -0.03378679656 weight 0.8047378541
+polygon 2 xyz 0.04121320344 0.05 -0.04 weight 0.8047378541
+curve 349 order 4 vertex 211 210
+polygon 1 xyz 0.05 0.035 -0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.05 0.04121320344 -0.01 weight 0.8047378541
+curve 350 order 4 vertex 212 210
+polygon 1 xyz 0.035 0.05 -0.01621320344 weight 0.8047378541
+polygon 2 xyz 0.04121320344 0.05 -0.01 weight 0.8047378541
+curve 351 vertex 209 210
+
+shell 71 bgsurface 73 boundary curve -345 346 347 348 size def
+shell 72 bgsurface 74 boundary curve 349 -346 -347 -350 size def
+patch 63 normal 1 0 6.123233996e-17 boundary curve 345 -349 351 size def
+patch 64 normal 0 1 0 boundary curve -348 350 -351 size def
+region 37 boundary shell 71 72 boundary patch 63 64  size def property 0
+# Particle 13
+vertex 220 xyz -0.065 0.05 -0.025 virtual
+vertex 221 xyz -0.035 0.05 -0.025 virtual
+curve 364 order 4 vertex 220 221 virtual
+polygon 1 xyz -0.065 0.08 -0.025 weight 0.3333333333
+polygon 2 xyz -0.035 0.08 -0.025 weight 0.3333333333
+curve 365 order 4 vertex 221 221 virtual
+polygon 1 xyz -0.035 0.05 -0.025 weight 0.3333333333
+polygon 2 xyz -0.035 0.05 -0.025 weight 0.3333333333
+curve 366 order 4 vertex 221 220 virtual
+polygon 1 xyz -0.035 0.02 -0.025 weight 0.3333333333
+polygon 2 xyz -0.065 0.02 -0.025 weight 0.3333333333
+curve 367 order 4 vertex 220 220 virtual
+polygon 1 xyz -0.065 0.05 -0.025 weight 0.3333333333
+polygon 2 xyz -0.065 0.05 -0.025 weight 0.3333333333
+
+surface 81 order 4 4 Curve 364 365 366 367  virtual
+polygon 1 1 xyz -0.035 0.08 0.035 weight 0.1111111111
+polygon 2 1 xyz -0.065 0.08 0.035 weight 0.1111111111
+polygon 1 2 xyz -0.035 0.02 0.035 weight 0.1111111111
+polygon 2 2 xyz -0.065 0.02 0.035 weight 0.1111111111
+
+surface 82 order 4 4 Curve 364 367 366 365  virtual
+polygon 1 1 xyz -0.065 0.08 -0.085 weight 0.1111111111
+polygon 2 1 xyz -0.035 0.08 -0.085 weight 0.1111111111
+polygon 1 2 xyz -0.065 0.02 -0.085 weight 0.1111111111
+polygon 2 2 xyz -0.035 0.02 -0.085 weight 0.1111111111
+# Particle 13
+vertex 234 xyz -0.05 0.05 -0.01
+vertex 235 xyz -0.05 0.05 -0.04
+vertex 236 xyz -0.05 0.035 -0.025
+vertex 237 xyz -0.035 0.05 -0.025
+vertex 238 xyz -0.03939339828 0.03939339828 -0.025
+curve 386 order 4 vertex 236 234
+polygon 1 xyz -0.05 0.035 -0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.05 0.04121320344 -0.01 weight 0.8047378541
+curve 387 order 4 vertex 236 238
+polygon 1 xyz -0.04596858347 0.035 -0.025 weight 0.9492530217
+polygon 2 xyz -0.04224404025 0.03654275632 -0.025 weight 0.9492530217
+curve 388 order 4 vertex 238 237
+polygon 1 xyz -0.03654275632 0.04224404025 -0.025 weight 0.9492530217
+polygon 2 xyz -0.035 0.04596858347 -0.025 weight 0.9492530217
+curve 389 order 4 vertex 237 234
+polygon 1 xyz -0.035 0.05 -0.01621320344 weight 0.8047378541
+polygon 2 xyz -0.04121320344 0.05 -0.01 weight 0.8047378541
+curve 390 order 4 vertex 236 235
+polygon 1 xyz -0.05 0.035 -0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.05 0.04121320344 -0.04 weight 0.8047378541
+curve 391 order 4 vertex 237 235
+polygon 1 xyz -0.035 0.05 -0.03378679656 weight 0.8047378541
+polygon 2 xyz -0.04121320344 0.05 -0.04 weight 0.8047378541
+curve 392 vertex 234 235
+
+shell 79 bgsurface 81 boundary curve -386 387 388 389 size def
+shell 80 bgsurface 82 boundary curve 390 -387 -388 -391 size def
+patch 71 normal -1 0 6.123233996e-17 boundary curve 386 -390 392 size def
+patch 72 normal -0 1 0 boundary curve -389 391 -392 size def
+region 41 boundary shell 79 80 boundary patch 71 72  size def property 0
+# Boundary Information
+vertex 239 xyz 0.05 0.05 0.05
+vertex 240 xyz 0.05 0.05 -0.05
+vertex 241 xyz 0.05 -0.05 0.05
+vertex 242 xyz 0.05 -0.05 -0.05
+vertex 243 xyz -0.05 0.05 0.05
+vertex 244 xyz -0.05 0.05 -0.05
+vertex 245 xyz -0.05 -0.05 0.05
+vertex 246 xyz -0.05 -0.05 -0.05
+curve 393 vertex 239 160
+curve 394 vertex 159 210
+curve 395 vertex 209 240
+curve 396 vertex 241 59
+curve 397 vertex 60 109
+curve 398 vertex 110 242
+curve 399 vertex 243 184
+curve 400 vertex 185 234
+curve 401 vertex 235 244
+curve 402 vertex 245 85
+curve 403 vertex 84 135
+curve 404 vertex 134 246
+curve 405 vertex 239 241
+curve 406 vertex 240 242
+curve 407 vertex 243 245
+curve 408 vertex 244 246
+curve 409 vertex 239 243
+curve 410 vertex 240 244
+curve 411 vertex 241 245
+curve 412 vertex 242 246
+
+patch 73 normal 1 0 0 boundary curve -61 62 -99 103 -181 185 -263 267 -345 349 -393 -394 -395 396 397 398 405 -406 size def
+patch 74 normal 0 1 0 boundary curve -31 32 266 -268 307 -309 348 -350 389 -391 393 394 395 -399 -400 -401 -409 410 size def
+patch 75 normal 0 0 1 boundary curve -405 407 409 -411 size def
+patch 76 normal 1 0 0 boundary curve 46 -47 140 -144 222 -226 304 -308 386 -390 -399 -400 -401 402 403 404 407 -408 mirror 73 size def
+patch 77 normal 0 1 0 boundary curve 16 -17 -102 104 -143 145 -184 186 -225 227 396 397 398 -402 -403 -404 -411 412 mirror 74 size def
+patch 78 normal 0 0 1 boundary curve -406 408 410 -412 mirror 75 size def
+# Matrix Information
+region 42 boundary surface -1 -2 boundary shell -3 -4 -7 -8 -11 -12 -15 -16 -23 -24 -31 -32 -39 -40 -47 -48 -55 -56 -63 -64 -71 -72 -79 -80 boundary patch 73 74 75 -76 -77 -78  size def  property 1 property 1 property 1
+
+# Refinement Vertices
+
+
+# PARTICLE CENTERS
+# Particle 1
+vertex 247 xyz 0 0 0	factor 5 virtual
+# Particle 2
+vertex 248 xyz 0 -0.05 0	factor 5 virtual
+# Particle 3
+vertex 249 xyz 0 0.05 0	factor 5 virtual
+# Particle 4
+vertex 250 xyz -0.05 0 0	factor 5 virtual
+# Particle 5
+vertex 251 xyz 0.05 0 0	factor 5 virtual
+# Particle 6
+vertex 252 xyz 0.05 -0.05 0.025	factor 5 virtual
+# Particle 7
+vertex 253 xyz -0.05 -0.05 0.025	factor 5 virtual
+# Particle 8
+vertex 254 xyz 0.05 -0.05 -0.025	factor 5 virtual
+# Particle 9
+vertex 255 xyz -0.05 -0.05 -0.025	factor 5 virtual
+# Particle 10
+vertex 256 xyz 0.05 0.05 0.025	factor 5 virtual
+# Particle 11
+vertex 257 xyz -0.05 0.05 0.025	factor 5 virtual
+# Particle 12
+vertex 258 xyz 0.05 0.05 -0.025	factor 5 virtual
+# Particle 13
+vertex 259 xyz -0.05 0.05 -0.025	factor 5 virtual

@@ -1,0 +1,53 @@
+{
+"number_of_materials": 2,
+"number_of_volume_fraction": 1,
+"volume_fraction": [1],
+"number_of_bases": 1,
+"basis_vectors": [
+{
+  "e1": [1, 0, 0],
+  "e2": [0, 1, 0],
+  "e3": [0, 0, 1]
+}
+],
+"density": [8.880000e-09, 2.710000e-09],
+"number_of_regions_to_set_material": 10,
+"material_regions": [
+	["region", 1, 0, 0],
+	["region", 2, 0, 0],
+	["region", 3, 0, 0],
+	["region", 4, 0, 0],
+	["region", 5, 0, 0],
+	["region", 6, 0, 0],
+	["region", 7, 0, 0],
+	["region", 8, 0, 0],
+	["region", 9, 0, 0],
+	["region", 10, 1, 1]
+],
+"materials": [
+{
+"name": "A",
+"ID": 0,
+"youngs_modulus": [2.400000e+03, 1.825400e+03, 0.000000e+00],
+"shear_modulus": [8.955200e+02, 0.000000e+00, 0.000000e+00],
+"poissons_ratio": [3.400000e-01, 0.000000e+00, 0.000000e+00],
+"coefficient_of_thermal_expansion": [0.0,0.0,0.0],
+"sig": 1.0e+7,
+"strain_energy_function_dev": 1,
+"strain_energy_function_vol": 2,
+"fraction_of_heat_from_mechanical": 0.0
+},
+{
+"name": "A",
+"ID": 1,
+"youngs_modulus": [8.000000e+02, 6.529900e+02, 0.000000e+00],
+"shear_modulus": [2.985100e+02, 0.000000e+00, 0.000000e+00],
+"poissons_ratio": [3.400000e-01, 0.000000e+00, 0.000000e+00],
+"coefficient_of_thermal_expansion": [0.0,0.0,0.0],
+"sig": 1.0e+7,
+"strain_energy_function_dev": 1,
+"strain_energy_function_vol": 2,
+"fraction_of_heat_from_mechanical": 0.0
+}
+]
+}

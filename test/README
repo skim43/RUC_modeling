@@ -1,0 +1,15 @@
+# How to create PGFem3D inputs
+# 0. Edit [working_dir.txt] to set your work directory. All new files will be generated in this directory.
+# 1. generate particle packs for different height
+module load matlab
+matlab < generate_particles.m 
+
+# 2. generate t3d files from the particle packs
+./generate_t3d.sh
+
+# 3. generate header files
+matlab < generate_PGFem3D_inputs.m
+
+# 4. create PGFem3D inputs
+./create_inputs.sh
+

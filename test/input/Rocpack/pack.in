@@ -1,0 +1,7 @@
+set seed = 440;
+
+set packing_fraction = 1.588202e-01;
+
+boundary { box 2.000000e-01 2.000000e-01 6.360000e-02 periodic}
+
+create 16 sphere size 1.820000e-02 ;
