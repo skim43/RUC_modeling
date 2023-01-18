@@ -13,3 +13,36 @@ matlab < generate_PGFem3D_inputs.m
 # 4. create PGFem3D inputs
 ./create_inputs.sh
 
+-------------
+
+#### AUTHOR: SION KIM, skim43@nd.edu
+#### LAST UPDATED: MARCH 23, 2022
+
+
+#### STEP 1: INSTALLATIONS
+1. git clone git@gitlab-cswarm.crc.nd.edu:gen_geom_mesh/gen_PGFem3D_input_from_Rocpack.git
+2. cd ./gen_PGFem3D_input_from_Rocpack
+3. git checkout develop_msnet
+4. git clone git@gitlab-cswarm.crc.nd.edu:gen_geom_mesh/generate_layer_spherical_pack.git
+5. cd ./generate_layer_spherical_pack
+6. git checkout develop_msnet
+7. cd ../gen_PGFem3D_input_from_Rocpack/test
+
+
+#### STEP 2: How to create PGFem3D inputs
+#0. Edit [working_dir.txt] to set your work directory. All new files will be generated in this directory.
+#1. generate particle packs for different height
+module load matlab
+matlab < generate_particles_skim.m
+# 2. generate t3d files from the particle packs
+./generate_t3d.sh
+# 3. generate header files
+matlab < generate_PGFem3D_inputs.m
+# 4. create PGFem3D inputs
+./create_inputs.sh
+# Or simply do this: ./run.sh
+
+
+#### STEP 3: How to creat interface multiscale inputs
+matlab < MS_update_PGFem3D_inputs.m
+# DONE! find the results in under test directory!
